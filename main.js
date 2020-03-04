@@ -2,9 +2,52 @@
  * YOUR CODE HERE *
  ******************/
 
+const call = function(thatFunction) {
+  thatFunction();
+}
 
+const callTwice = function(thatFunction) {
+  thatFunction();
+  thatFunction();
+}
 
+const callXTimes = function(thatFunction, xTimesToCallNum) {
+  for(let i = xTimesToCallNum; i > 0; i--) {
+    thatFunction()
+  }
+}
 
+const returnFromFunc = function(thatFunction) {
+  return thatFunction();
+}
+
+const modifyString = function(str, thatFunction) {
+  return thatFunction(str);
+}
+
+const modifyNumber = function(number, thatFunction) {
+  return thatFunction(number);
+}
+
+const modifyAnything = function(anyTypeValue, thatFunction) {
+  return thatFunction(anyTypeValue);
+}
+
+const twoFuncs = function(thatFirstFunction, thatSecondFunction) {
+  return thatSecondFunction(thatFirstFunction());
+}
+
+const threeFuncs = function(thatFirstFunction, thatSecondFunction, thatThirdFunction) {
+  return thatThirdFunction(thatSecondFunction(thatFirstFunction()));
+}
+
+const twoValues = function(valueOne, valueTwo, thatOnlyOneFunction) {
+  return thatOnlyOneFunction(valueOne, valueTwo);
+}
+
+const twoValuesRTL = function(valueTwo, valueOne, thatOnlyOneFunction, ) {
+  return thatOnlyOneFunction(valueOne, valueTwo);
+}
 /********************************
  * OUR CODE HERE - DON'T TOUCH! *
  ********************************/
@@ -63,6 +106,7 @@ module.exports = {
   modifyNumber,
   modifyAnything,
   twoFuncs,
+  threeFuncs,
   twoValues,
   twoValuesRTL,
 }
